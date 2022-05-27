@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Trabajo_Gestion
@@ -17,38 +18,31 @@ namespace Trabajo_Gestion
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Cliente : Window
     {
-        public MainWindow()
+        public Cliente()
         {
             InitializeComponent();
         }
 
-        private void btn_promotor_Click(object sender, RoutedEventArgs e)
+        private void btn_atrasCliente_Click(object sender, RoutedEventArgs e)
         {
             Promotor promotor = new Promotor();
             promotor.Show();
             Close();
         }
 
-        private void btn_cliente_Click(object sender, RoutedEventArgs e)
-        {
-            Cliente cliente = new Cliente();
-            cliente.Show();
-            Close();
-        }
-
-        private void btn_provincia_Click(object sender, RoutedEventArgs e)
+        private void btn_siguienteCliente_Click(object sender, RoutedEventArgs e)
         {
             Provincia provincia = new Provincia();
             provincia.Show();
             Close();
         }
 
-        private void btn_localidad_Click(object sender, RoutedEventArgs e)
+        private void btn_menuCliente_Click(object sender, RoutedEventArgs e)
         {
-            Localidad localidad = new Localidad();
-            localidad.Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             Close();
         }
     }

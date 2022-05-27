@@ -15,30 +15,30 @@ using System.Windows.Shapes;
 namespace Trabajo_Gestion
 {
     /// <summary>
-    /// Lógica de interacción para Promotor.xaml
+    /// Lógica de interacción para Provincia.xaml
     /// </summary>
-    public partial class Promotor : Window
+    public partial class Provincia : Window
     {
-        public Promotor()
+        public Provincia()
         {
             InitializeComponent();
         }
 
-        private void btn_atrasPromotor_Click(object sender, RoutedEventArgs e)
-        {
-            Localidad localidad = new Localidad();
-            localidad.Show();
-            Close();
-        }
-
-        private void btn_siguientePromotor_Click(object sender, RoutedEventArgs e)
+        private void btn_atrasProvincias_Click(object sender, RoutedEventArgs e)
         {
             Cliente cliente = new Cliente();
             cliente.Show();
             Close();
         }
 
-        private void btn_menuPromotor_Click(object sender, RoutedEventArgs e)
+        private void btn_siguienteProvincias_Click(object sender, RoutedEventArgs e)
+        {
+            Localidad localidad = new Localidad();
+            localidad.Show();
+            Close();
+        }
+
+        private void btn_menuProvincias_Click_1(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
             main.Show();

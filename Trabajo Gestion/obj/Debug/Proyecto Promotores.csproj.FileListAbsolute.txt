@@ -16,3 +16,9 @@ D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Proyecto Promoto
 D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Proyecto Promotores.csproj.CoreCompileInputs.cache
 D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.exe
 D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.pdb
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Localidad.g.cs
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Localidad.baml
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Cliente.g.cs
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Provincia.g.cs
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Cliente.baml
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Provincia.baml

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Trabajo_Gestion.Provincia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trabajo_Gestion"
+        mc:Ignorable="d"
+        Title="Alta de Provincia" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png">
+    <Grid Margin="-1,1,1,-1">
+        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="272"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,16,0,0"/>
+        <Label x:Name="lbl_id" Content="Provincia ID:&#xA;" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_idProvincia" HorizontalAlignment="Left" Margin="127,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,61,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_nombreProvincia" HorizontalAlignment="Left" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Provincias:" HorizontalAlignment="Left" Margin="283,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="425,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <ListBox Name="lbox_provincias" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68"/>
+        <ListBox Name="lbox_provinciasDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="425,45,31,68"/>
+        <Button x:Name="btn_agregarProvincias" Content="Agregar" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="btn_actualizarProvincias" Content="Actualizar" HorizontalAlignment="Left" Margin="185,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
+        <Button x:Name="btn_siguienteProvincias" Content="Siguiente" HorizontalAlignment="Left" Margin="437,232,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteProvincias_Click"/>
+        <Button x:Name="btn_menuProvincias" Content="Menu" HorizontalAlignment="Left" Margin="368,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuProvincias_Click_1"/>
+        <Button x:Name="btn_atrasProvincias" Content="Volver" HorizontalAlignment="Left" Margin="299,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasProvincias_Click"/>
+
+    </Grid>
+</Window>
