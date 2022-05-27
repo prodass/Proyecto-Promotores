@@ -1,0 +1,16 @@
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\bin\Debug\Trabajo Gestion.exe.config
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\bin\Debug\Trabajo Gestion.exe
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\bin\Debug\Trabajo Gestion.pdb
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.csproj.AssemblyReference.cache
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.csproj.SuggestedBindingRedirects.cache
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\MainWindow.g.cs
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\App.g.cs
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion_MarkupCompile.cache
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion_MarkupCompile.lref
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\MainWindow.baml
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.g.resources
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo_Gestion.Properties.Resources.resources
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.csproj.GenerateResource.cache
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.csproj.CoreCompileInputs.cache
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.exe
+D:\Proyectos\C#\repos\Trabajo Gestion\Trabajo Gestion\obj\Debug\Trabajo Gestion.pdb
