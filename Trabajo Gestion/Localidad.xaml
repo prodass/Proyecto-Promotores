@@ -18,7 +18,7 @@
         <TextBox x:Name="tbox_idProvincia" HorizontalAlignment="Left" Margin="127,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Localidades:" HorizontalAlignment="Left" Margin="283,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
         <Label Content="Detalles:" HorizontalAlignment="Left" Margin="425,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <ListBox Name="lbox_localidades" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68"/>
+        <ListBox Name="lbox_localidades" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68" SelectionChanged="lbox_localidades_SelectionChanged"/>
         <ListBox Name="lbox_localidadesDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="425,45,31,68"/>
         <Button x:Name="btn_agregarLocalidades" Content="Agregar" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
         <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
