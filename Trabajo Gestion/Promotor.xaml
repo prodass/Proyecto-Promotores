@@ -5,30 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Alta de Promotor" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+        Title="Alta de Promotor" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStyle="SingleBorderWindow" Background="#FFFFE2E2">
     <Grid Margin="-1,1,0,-1">
-        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,11,0,0" Stroke="Black" VerticalAlignment="Top" Width="272"/>
+        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,11,0,0" Stroke="Black" VerticalAlignment="Top" Width="272" Fill="#FFF3EAEA"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,11,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,11,0,0" Fill="#FFF3EAEA"/>
         <Label x:Name="lbl_id" Content="Promotor ID:&#xA;" HorizontalAlignment="Left" Margin="31,25,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
         <TextBox x:Name="tbox_idPromotor" HorizontalAlignment="Left" Margin="127,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
         <TextBox x:Name="tbox_nombrePromotor" HorizontalAlignment="Left" Margin="127,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Promotores:" HorizontalAlignment="Left" Margin="283,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="413,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <ListBox Name="lbox_promotores" Margin="283,40,175,73" SelectionChanged="lbox_promotores_SelectionChanged"/>
-        <ListBox Name="lbox_promotoresDetalles" Margin="412,40,31,73"/>
+        <Label Content="Promotores:" HorizontalAlignment="Left" Margin="282,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="410,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <ListBox Name="lbox_promotores" Margin="282,40,176,73" SelectionChanged="lbox_promotores_SelectionChanged"/>
+        <ListBox Name="lbox_promotoresDetalles" Margin="409,40,34,73"/>
         <Button x:Name="btn_agregarPromotor" Content="Agregar" HorizontalAlignment="Left" Margin="36,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_agregarPromotor_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,219,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,219,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5"/>
         <Button x:Name="btn_actualizarPromotor" Content="Actualizar" HorizontalAlignment="Left" Margin="185,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_actualizarPromotor_Click"/>
         <Button x:Name="btn_siguientePromotor" Content="Siguiente" HorizontalAlignment="Left" Margin="501,262,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguientePromotor_Click"/>
         <Button x:Name="btn_menuPromotor" Content="Menu" HorizontalAlignment="Left" Margin="432,262,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuPromotor_Click"/>
@@ -36,7 +27,8 @@
         <Button x:Name="btn_borrarPromotor" Content="Borrar" HorizontalAlignment="Left" Margin="111,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_borrarPromotor_Click"/>
         <Label x:Name="lbl_descripcion" Content="Descripcion:&#xA;" HorizontalAlignment="Left" Margin="31,86,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
         <TextBox x:Name="tbox_descripcion" HorizontalAlignment="Left" Margin="127,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_consultasPromotor" Content="Mas consultas" HorizontalAlignment="Left" Margin="453,226,0,0" VerticalAlignment="Top" Width="86" UseLayoutRounding="False" Click="btn_consultasPromotor_Click"/>
+        <Button x:Name="btn_consultasPromotor" Content="Mas consultas" HorizontalAlignment="Left" Margin="450,226,0,0" VerticalAlignment="Top" Width="86" UseLayoutRounding="False" Click="btn_consultasPromotor_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="177" Margin="401,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
 
     </Grid>
 </Window>

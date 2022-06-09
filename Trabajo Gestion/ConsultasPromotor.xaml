@@ -5,19 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Consultas"  Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*">
-                
-            </ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="160">
-            </RowDefinition>
-        </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,30,127,-91" />
-        <Button x:Name="btn_atrasConsultaProm" Content="Volver" HorizontalAlignment="Left" Margin="370,274,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Grid.Column="1" />
-
+        Title="Consultas Promotor"  Height="300" Width="833" WindowStartupLocation="CenterScreen" Icon="/descarga.png" ResizeMode="NoResize" Background="#FFFFE2E2" WindowStyle="SingleBorderWindow" MaxWidth="833" MaxHeight="300">
+    <Grid Margin="0,0,0,-6">
+        <DataGrid  x:Name="dg_consultaA" Margin="8,59,553,47" IsReadOnly="true" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Promotor ID" Width="76" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Nombre" Width="54" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Cantidad de clientes" Width="118" Binding="{Binding Clientes}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Ranking de clientes por promotor:" HorizontalAlignment="Left" Margin="9,33,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal"/>
+        <Label Content="Consultas Promotor" HorizontalAlignment="Center" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Promotor con mas clientes:" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal"/>
+        <Rectangle HorizontalAlignment="Left" Height="160" Margin="272,58,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <DataGrid  x:Name="dg_consultaD" Margin="280,59,281,47" IsReadOnly="true" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Promotor ID" Width="76" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Nombre" Width="54" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Cantidad de clientes" Width="118" Binding="{Binding Clientes}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid  x:Name="dg_consultaE" Margin="551,59,10,47" IsReadOnly="true" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Promotor ID" Width="76" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Nombre" Width="54" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Cantidad de clientes" Width="118" Binding="{Binding Clientes}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle HorizontalAlignment="Left" Height="160" Margin="543,58,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Label Content="Saldos por promotor:" HorizontalAlignment="Left" Margin="551,33,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal"/>
+        <Button Content="Volver" HorizontalAlignment="Left" Margin="745,228,0,0" VerticalAlignment="Top" Width="62" Height="23" Click="Button_Click"/>
     </Grid>
 </Window>

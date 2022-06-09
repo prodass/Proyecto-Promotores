@@ -96,7 +96,7 @@ namespace Trabajo_Gestion
                 SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection);
                 sqlConnection.Open();
 
-                var res = MessageBox.Show("Desea agregar a " + tbox_nombrePromotor.Text + " a la lista de promotores?", "Alta de promotor", MessageBoxButtons.YesNo);
+                var res = MessageBox.Show($"Desea agregar a {tbox_nombrePromotor.Text} a la lista de promotores?", "Alta de promotor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 switch (res)
                 {
                     case System.Windows.Forms.DialogResult.Yes:
@@ -105,10 +105,10 @@ namespace Trabajo_Gestion
                         sqlCommand.Parameters.AddWithValue("@Descripcion", tbox_descripcion.Text);
                         sqlCommand.ExecuteScalar();
                         Thread.Sleep(1000);
-                        MessageBox.Show($"Se ha dado de alta a {tbox_nombrePromotor.Text} correctamente!", "Alta de promotor");
+                        MessageBox.Show($"Se ha dado de alta a {tbox_nombrePromotor.Text} correctamente!", "Alta de promotor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case System.Windows.Forms.DialogResult.No:
-                        MessageBox.Show($"Se no se ha dado de alta al promotor {tbox_nombrePromotor.Text}!", "Alta de promotor");
+                        MessageBox.Show($"Se no se ha dado de alta al promotor {tbox_nombrePromotor.Text}!", "Alta de promotor", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         break;
                     default:
                         break;
@@ -127,7 +127,6 @@ namespace Trabajo_Gestion
                 tbox_idPromotor.Clear();
             }
         }
-
         private void btn_borrarPromotor_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -136,17 +135,17 @@ namespace Trabajo_Gestion
                 SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection);
                 sqlConnection.Open();
 
-                var res = MessageBox.Show("Desea eliminar al promotor seleccionado de la lista?", "Alta de promotor", MessageBoxButtons.YesNo);
+                var res = MessageBox.Show("Desea eliminar al promotor seleccionado de la lista?", "Alta de promotor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 switch (res)
                 {
                     case System.Windows.Forms.DialogResult.Yes:
                         sqlCommand.Parameters.AddWithValue("@Id", lbox_promotores.SelectedValue);
                         sqlCommand.ExecuteScalar();
                         Thread.Sleep(1000);
-                        MessageBox.Show($"Se ha eliminado al promotor correctamente!", "Alta de promotor");
+                        MessageBox.Show($"Se ha eliminado al promotor correctamente!", "Alta de promotor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case System.Windows.Forms.DialogResult.No:
-                        MessageBox.Show($"Se no se ha eliminado al promotor seleccionado!", "Alta de promotor");
+                        MessageBox.Show($"Se no se ha eliminado al promotor seleccionado!", "Alta de promotor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     default:
                         break;
@@ -162,10 +161,8 @@ namespace Trabajo_Gestion
                 MostrarPromotores();
             }
         }
-
         private void btn_actualizarPromotor_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 string consulta = "update Promotor set Nombre = @Nombre, Descripcion = @Descripcion where PromotorID = @IdS";
@@ -173,7 +170,7 @@ namespace Trabajo_Gestion
                 SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection);
                 sqlConnection.Open();
 
-                var res = MessageBox.Show("Esta seguro que desea actualizar al promotor seleccionado?", "Alta de promotor", MessageBoxButtons.YesNo);
+                var res = MessageBox.Show("Esta seguro que desea actualizar al promotor seleccionado?", "Alta de promotor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 switch (res)
                 {
                     case System.Windows.Forms.DialogResult.Yes:
@@ -182,18 +179,14 @@ namespace Trabajo_Gestion
                         sqlCommand.Parameters.AddWithValue("@IdS", tbox_idPromotor.Text);
                         sqlCommand.ExecuteScalar();
                         Thread.Sleep(1000);
-                        MessageBox.Show($"Se ha actualizado al promotor correctamente!", "Alta de promotor");
+                        MessageBox.Show($"Se ha actualizado al promotor correctamente!", "Alta de promotor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case System.Windows.Forms.DialogResult.No:
-                        MessageBox.Show($"No se ha actualizado al promotor seleccionado!", "Alta de promotor");
+                        MessageBox.Show($"No se ha actualizado al promotor seleccionado!", "Alta de promotor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     default:
                         break;
                 }
-
-
-                
-            
             }
             catch (Exception e3)
             {
@@ -207,36 +200,30 @@ namespace Trabajo_Gestion
                 tbox_descripcion.Clear();
                 tbox_idPromotor.Clear();
             }
-            
         }
-
         private void lbox_promotores_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             MostrarDescripciones();
             
         }
-
         private void btn_atrasPromotor_Click(object sender, RoutedEventArgs e)
         {
             Localidad localidad = new Localidad();
             localidad.Show();
             Close();
         }
-
         private void btn_siguientePromotor_Click(object sender, RoutedEventArgs e)
         {
             Cliente cliente = new Cliente();
             cliente.Show();
             Close();
         }
-
         private void btn_menuPromotor_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
             main.Show();
             Close();
         }
-
         private void btn_consultasPromotor_Click(object sender, RoutedEventArgs e)
         {
             ConsultasPromotor consultas = new ConsultasPromotor();

@@ -1,0 +1,33 @@
+﻿<Window x:Class="Trabajo_Gestion.ConsultaCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trabajo_Gestion"
+        mc:Ignorable="d"
+        Title="Consulta Cliente" Height="315" Width="585" MinWidth="585" MinHeight="315" MaxWidth="585" MaxHeight="315" WindowStartupLocation="CenterScreen" Icon="/descarga.png" Background="#FFFFE2E2">
+    <Grid>
+        <Label Content="Consultas Clientes" HorizontalAlignment="Center" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" Margin="0,1,0,0"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="85"/>
+        <DataGrid  x:Name="dg_consultaA" Margin="11,53,240,40" IsReadOnly="true" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="21" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Nombre" Width="54" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Domicilio" Width="90" Binding="{Binding Domicilio}"/>
+                <DataGridTextColumn Header="Localidad" Width="70" Binding="{Binding Localidad}"/>
+                <DataGridTextColumn Header="Provincia" Width="75" Binding="{Binding Provincia}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Datos del cliente:" HorizontalAlignment="Left" Margin="12,27,0,0" VerticalAlignment="Top"/>
+        <DataGrid  x:Name="dg_consultaF" Margin="353,53,10,40" IsReadOnly="true" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="22" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Nombre" Width="85" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Saldo" Width="91" Binding="{Binding Saldo}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Clientes con saldo mayor a 1000:" HorizontalAlignment="Left" Margin="354,27,0,0" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="182" Margin="340,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Button x:Name="btn_volver" Content="Volver" HorizontalAlignment="Left" Margin="504,245,0,0" VerticalAlignment="Top" Width="55" Height="21" Click="btn_volver_Click"/>
+    </Grid>
+</Window>

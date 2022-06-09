@@ -5,23 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Alta de Localidad" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png">
-    <Grid Margin="-1,1,1,-1">
-        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="272"/>
+        Title="Alta de Localidad" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" Background="#FFFFE2E2">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,11,0,0" Stroke="Black" VerticalAlignment="Top" Width="272" Fill="#FFF3EAEA"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,16,0,0"/>
-        <Label x:Name="lbl_id" Content="Localidad ID:&#xA;" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idLocalidad" HorizontalAlignment="Left" Margin="127,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,61,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_nombreLocalidad" HorizontalAlignment="Left" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy1" Content="Provincia ID:&#xA;" HorizontalAlignment="Left" Margin="31,92,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idProvincia" HorizontalAlignment="Left" Margin="127,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Localidades:" HorizontalAlignment="Left" Margin="283,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="425,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <ListBox Name="lbox_localidades" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68" SelectionChanged="lbox_localidades_SelectionChanged"/>
-        <ListBox Name="lbox_localidadesDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="425,45,31,68"/>
-        <Button x:Name="btn_agregarLocalidades" Content="Agregar" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
+        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,11,0,0" Fill="#FFF3EAEA"/>
+        <Label x:Name="lbl_id" Content="Localidad ID:&#xA;" HorizontalAlignment="Left" Margin="31,25,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_idLocalidad" HorizontalAlignment="Left" Margin="127,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_nombreLocalidad" HorizontalAlignment="Left" Margin="127,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy1" Content="Provincia ID:&#xA;" HorizontalAlignment="Left" Margin="31,87,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <Label Content="Localidades:" HorizontalAlignment="Left" Margin="283,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="409,14,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <ListBox Name="lbox_localidades" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,40,175,73" SelectionChanged="lbox_localidades_SelectionChanged"/>
+        <ListBox Name="lbox_localidadesDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="409,40,32,73"/>
+        <Button x:Name="btn_agregarLocalidades" Content="Agregar" HorizontalAlignment="Left" Margin="36,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_agregarLocalidades_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,219,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -31,10 +30,16 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Button x:Name="btn_actualizarLocalidades" Content="Actualizar" HorizontalAlignment="Left" Margin="185,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Button x:Name="btn_siguienteLocalidades" Content="Siguiente" HorizontalAlignment="Left" Margin="437,232,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteLocalidades_Click"/>
-        <Button x:Name="btn_menuLocalidades" Content="Menu" HorizontalAlignment="Left" Margin="368,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuLocalidades_Click_1"/>
-        <Button x:Name="btn_atrasLocalidades" Content="Volver" HorizontalAlignment="Left" Margin="299,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasLocalidades_Click"/>
+        <Button x:Name="btn_actualizarLocalidades" Content="Actualizar" HorizontalAlignment="Left" Margin="185,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_actualizarLocalidades_Click"/>
+        <Button x:Name="btn_siguienteLocalidades" Content="Siguiente" HorizontalAlignment="Left" Margin="501,262,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteLocalidades_Click"/>
+        <Button x:Name="btn_menuLocalidades" Content="Menu" HorizontalAlignment="Left" Margin="432,262,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuLocalidades_Click_1"/>
+        <Button x:Name="btn_atrasLocalidades" Content="Volver" HorizontalAlignment="Left" Margin="363,262,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasLocalidades_Click"/>
+        <ComboBox x:Name="cb_provinciaID" HorizontalAlignment="Left" Margin="127,91,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Nombre" SelectedValuePath="ProvinciaID"/>
+        <Label x:Name="lbl_id_Copy2" Content="Descripcion:&#xA;" HorizontalAlignment="Left" Margin="31,120,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_Descripcion" HorizontalAlignment="Left" Margin="127,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_borrarLocalidades" Content="Borrar" HorizontalAlignment="Left" Margin="111,226,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_borrarLocalidades_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="176" Margin="401,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Button x:Name="btn_consultas" Content="Mas consultas" HorizontalAlignment="Left" Margin="453,225,0,0" VerticalAlignment="Top" Width="84" Height="21" Click="btn_consultas_Click"/>
 
     </Grid>
 </Window>

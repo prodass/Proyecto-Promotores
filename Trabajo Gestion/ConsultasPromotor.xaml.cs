@@ -32,26 +32,46 @@ namespace Trabajo_Gestion
 
             InitializeComponent();
             ConsultaB();
+            ConsultaD();
+            ConsultaE();
         }
         private void ConsultaB()
         {
-            string consulta = "select Promotor.Nombre, COUNT(Cliente.IdPromotor) as A from Promotor inner join Cliente on PromotorID = Cliente.IdPromotor GROUP BY Promotor.Nombre";
+            string consulta = "select Promotor.PromotorID as ID, Promotor.Nombre, COUNT(Cliente.IdPromotor) as Clientes from Promotor inner join Cliente on PromotorID = Cliente.IdPromotor GROUP BY Promotor.Nombre, Promotor.PromotorID";
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, sqlConnection);
 
-            DataTable promotorConsultaTabla = new DataTable(); //Creamos este datatable que nos va a permitir almacenar datos de tablas en un objeto (6to paso)
-            sqlDataAdapter.Fill(promotorConsultaTabla);
-
-            using (sqlDataAdapter)
-            {
-                /*string nombre = promotorConsultaTabla.;
-                lbox_consultab.Items.Add(); //Aca estamos haciendo que en la list box muestre solo la parte de los nombres de la tabla (8)
-                lbox_consultab.Items.Add("A"); //Aca estamos haciendo que en la list box muestre solo la parte de los nombres de la tabla (8)
-                lbox_consultab.SelectedValuePath = "PromotorID"; //Esto es lo que buscaria al hacerle click a cada pestana digamos (9)
-                //lbox_consultab.ItemsSource = promotorConsultaTabla.DefaultView; //Sirve para darle el formato a nuestra tabla (10)*/
-            }
+            DataTable promotorConsultaATabla = new DataTable(); //Creamos este datatable que nos va a permitir almacenar datos de tablas en un objeto (6to paso)
+            sqlDataAdapter.Fill(promotorConsultaATabla);
+            dg_consultaA.ItemsSource = promotorConsultaATabla.DefaultView;
         }
 
-        
+        private void ConsultaD()
+        {
+            string consulta = "select top 1 Promotor.PromotorID as ID, Promotor.Nombre, COUNT(Cliente.IdPromotor) as Clientes from Promotor inner join Cliente on PromotorID = Cliente.IdPromotor GROUP BY Promotor.Nombre, Promotor.PromotorID";
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, sqlConnection);
+
+            DataTable promotorConsultaDTabla = new DataTable(); //Creamos este datatable que nos va a permitir almacenar datos de tablas en un objeto (6to paso)
+            sqlDataAdapter.Fill(promotorConsultaDTabla);
+            dg_consultaD.ItemsSource = promotorConsultaDTabla.DefaultView;
+        }
+        private void ConsultaE()
+        {
+            string consulta = "select Promotor.PromotorID as ID, Promotor.Nombre, SUM(Cliente.Saldo) as Clientes from Promotor inner join Cliente on PromotorID = Cliente.IdPromotor GROUP BY Promotor.Nombre, Promotor.PromotorID";
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, sqlConnection);
+
+            DataTable promotorConsultaETabla = new DataTable(); //Creamos este datatable que nos va a permitir almacenar datos de tablas en un objeto (6to paso)
+            sqlDataAdapter.Fill(promotorConsultaETabla);
+            dg_consultaE.ItemsSource = promotorConsultaETabla.DefaultView;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Promotor promotor = new Promotor();
+            promotor.Show();
+            Close();
+        }
     }
 }

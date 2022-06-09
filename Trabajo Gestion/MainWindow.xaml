@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" BorderBrush="#FF842929" Background="#FFFFE2E2" Icon="/descarga.png">
+        Title="Menu Principal" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" BorderBrush="#FF842929" Background="#FFFFE2E2" Icon="/descarga.png" SizeToContent="WidthAndHeight" WindowStyle="SingleBorderWindow">
     <Window.OpacityMask>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black"/>
             <GradientStop Color="#FFD6C1C1" Offset="1"/>
         </LinearGradientBrush>
     </Window.OpacityMask>
-    <Grid>
-        <Button x:Name="btn_promotor" Content="Gestionar Promotores" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" Width="129" Background="#FFDDDDDD" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Click="btn_promotor_Click"/>
-        <Button x:Name="btn_cliente" Content="Gestionar Clientes" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="129" Background="#FFDDDDDD" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Click="btn_cliente_Click"/>
-        <Button x:Name="btn_provincia" Content="Gestionar Provincias" HorizontalAlignment="Center" VerticalAlignment="Top" Width="129" Background="#FFDDDDDD" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Margin="0,143,0,0" Click="btn_provincia_Click"/>
-        <Button x:Name="btn_localidad" Content="Gestionar Localidades" HorizontalAlignment="Center" VerticalAlignment="Top" Width="129" Background="#FFDDDDDD" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Margin="0,169,0,0" Click="btn_localidad_Click"/>
+    <Grid Margin="0,-4,0,4">
+        <Button x:Name="btn_promotor" Content="Gestionar Promotores" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" Width="129" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Click="btn_promotor_Click" Background="#FFEFEFEF"/>
+        <Button x:Name="btn_cliente" Content="Gestionar Clientes" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" Width="129" Background="#FFEFEFEF" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Click="btn_cliente_Click"/>
+        <Button x:Name="btn_provincia" Content="Gestionar Provincias" HorizontalAlignment="Center" VerticalAlignment="Top" Width="129" Background="#FFEFEFEF" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Click="btn_provincia_Click" Margin="0,157,0,0"/>
+        <Button x:Name="btn_localidad" Content="Gestionar Localidades" HorizontalAlignment="Center" VerticalAlignment="Top" Width="129" Background="#FFEFEFEF" BorderBrush="#FF806E6E" BorderThickness="1,1,2,2" Margin="0,193,0,0" Click="btn_localidad_Click"/>
+        <Label Content="Sistema gestor de Promotores y Clientes" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Background="{x:Null}" FontWeight="Normal" FontStyle="Italic" FontFamily="Segoe UI Variable Small Semibold" FontSize="14"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="275"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="103"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,150,0,0" Stroke="Black" VerticalAlignment="Top" Width="103"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,185,0,0" Stroke="Black" VerticalAlignment="Top" Width="104"/>
     </Grid>
 </Window>

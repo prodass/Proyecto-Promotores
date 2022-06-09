@@ -5,29 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Alta de Cliente" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png">
-    <Grid Margin="-1,1,1,-1">
-        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="272"/>
+        Title="Alta de Cliente" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" Background="#FFFFE2E2">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,12,0,0" Stroke="Black" VerticalAlignment="Top" Width="272" Fill="#FFF3EAEA"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,16,0,0"/>
-        <Label x:Name="lbl_id" Content="Cliente ID:&#xA;" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idCliente" HorizontalAlignment="Left" Margin="127,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,61,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_nombreCliente" HorizontalAlignment="Left" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy1" Content="Domicilio:&#xA;" HorizontalAlignment="Left" Margin="31,92,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_domicilioCliente" HorizontalAlignment="Left" Margin="127,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy2" Content="Localidad ID:&#xA;" HorizontalAlignment="Left" Margin="31,125,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idLocalidadCliente" HorizontalAlignment="Left" Margin="127,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy3" Content="Promotor ID:&#xA;" HorizontalAlignment="Left" Margin="31,157,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idPromotorCliente" HorizontalAlignment="Left" Margin="127,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy5" Content="Saldo:" HorizontalAlignment="Left" Margin="31,188,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_saldoCliente" HorizontalAlignment="Left" Margin="127,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Clientes:" HorizontalAlignment="Left" Margin="283,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="425,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <ListBox Name="lbox_clientes" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68"/>
-        <ListBox Name="lbox_clientesDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="425,45,31,68"/>
-        <Button x:Name="btn_agregarClientes" Content="Agregar" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
+        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,12,0,0" Fill="#FFF3EAEA"/>
+        <Label x:Name="lbl_id" Content="Cliente ID:&#xA;" HorizontalAlignment="Left" Margin="31,20,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_idCliente" HorizontalAlignment="Left" Margin="127,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,49,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_nombreCliente" HorizontalAlignment="Left" Margin="127,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy1" Content="Domicilio:&#xA;" HorizontalAlignment="Left" Margin="31,79,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_domicilioCliente" HorizontalAlignment="Left" Margin="127,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy2" Content="Localidad ID:&#xA;" HorizontalAlignment="Left" Margin="31,108,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <Label x:Name="lbl_id_Copy3" Content="Promotor ID:&#xA;" HorizontalAlignment="Left" Margin="31,137,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <Label x:Name="lbl_id_Copy5" Content="Saldo:" HorizontalAlignment="Left" Margin="31,164,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_saldoCliente" HorizontalAlignment="Left" Margin="127,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Clientes:" HorizontalAlignment="Left" Margin="287,15,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="420,15,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <ListBox Name="lbox_clientes" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="287,41,171,72" SelectionChanged="lbox_clientes_SelectionChanged"/>
+        <ListBox Name="lbox_clientesDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="420,41,36,72"/>
+        <Button x:Name="btn_agregarClientes" Content="Agregar" HorizontalAlignment="Left" Margin="36,227,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_agregarClientes_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,220,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -37,10 +35,17 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Button x:Name="btn_actualizarClientes" Content="Actualizar" HorizontalAlignment="Left" Margin="185,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Button x:Name="btn_siguienteCliente" Content="Siguiente" HorizontalAlignment="Left" Margin="437,232,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteCliente_Click"/>
-        <Button x:Name="btn_menuCliente" Content="Menu" HorizontalAlignment="Left" Margin="368,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuCliente_Click"/>
-        <Button x:Name="btn_atrasCliente" Content="Volver" HorizontalAlignment="Left" Margin="299,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasCliente_Click"/>
+        <Button x:Name="btn_actualizarCliente" Content="Actualizar" HorizontalAlignment="Left" Margin="185,227,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_actualizarCliente_Click_1"/>
+        <Button x:Name="btn_siguienteCliente" Content="Siguiente" HorizontalAlignment="Left" Margin="501,263,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteCliente_Click"/>
+        <Button x:Name="btn_menuCliente" Content="Menu" HorizontalAlignment="Left" Margin="432,263,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuCliente_Click"/>
+        <Button x:Name="btn_atrasCliente" Content="Volver" HorizontalAlignment="Left" Margin="363,263,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasCliente_Click"/>
+        <ComboBox x:Name="cb_localidadID" HorizontalAlignment="Left" Margin="127,110,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb_promotorID" HorizontalAlignment="Left" Margin="127,139,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_borrarClientes" Content="Borrar" HorizontalAlignment="Left" Margin="110,227,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_borrarClientes_Click"/>
+        <Label x:Name="lbl_id_Copy4" Content="Descripcion:" HorizontalAlignment="Left" Margin="31,188,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_Descripcion" HorizontalAlignment="Left" Margin="127,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Rectangle HorizontalAlignment="Left" Height="175" Margin="409,43,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Button x:Name="btn_consultas" Content="Mas consultas" HorizontalAlignment="Left" Margin="447,226,0,0" VerticalAlignment="Top" Width="86" Click="btn_consultas_Click"/>
 
     </Grid>
 </Window>

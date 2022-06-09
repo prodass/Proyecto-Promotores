@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trabajo_Gestion"
         mc:Ignorable="d"
-        Title="Alta de Provincia" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png">
-    <Grid Margin="-1,1,1,-1">
-        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="272"/>
+        Title="Alta de Provincia" Height="330" Width="585" MinWidth="585" MinHeight="330" MaxWidth="585" MaxHeight="330" WindowStartupLocation="CenterScreen" Icon="/descarga.png" Background="#FFFFE2E2">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="244" Margin="274,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="272" Fill="#FFF3EAEA"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,16,0,0"/>
-        <Label x:Name="lbl_id" Content="Provincia ID:&#xA;" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_idProvincia" HorizontalAlignment="Left" Margin="127,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,61,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
-        <TextBox x:Name="tbox_nombreProvincia" HorizontalAlignment="Left" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Provincias:" HorizontalAlignment="Left" Margin="283,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="425,19,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
-        <ListBox Name="lbox_provincias" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,45,175,68"/>
-        <ListBox Name="lbox_provinciasDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="425,45,31,68"/>
-        <Button x:Name="btn_agregarProvincias" Content="Agregar" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
+        <Rectangle HorizontalAlignment="Left" Height="244" Stroke="Black" VerticalAlignment="Top" Width="234" Margin="25,10,0,0" Fill="#FFF3EAEA"/>
+        <Label x:Name="lbl_id" Content="Provincia ID:&#xA;" HorizontalAlignment="Left" Margin="31,24,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_idProvincia" HorizontalAlignment="Left" Margin="127,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_id_Copy" Content="Nombre:&#xA;" HorizontalAlignment="Left" Margin="31,55,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_nombreProvincia" HorizontalAlignment="Left" Margin="127,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Provincias:" HorizontalAlignment="Left" Margin="283,13,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <Label Content="Detalles:" HorizontalAlignment="Left" Margin="409,13,0,0" VerticalAlignment="Top" FontWeight="Normal"/>
+        <ListBox Name="lbox_provincias" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="283,39,175,74" SelectionChanged="lbox_provincias_SelectionChanged"/>
+        <ListBox Name="lbox_provinciasDetalles" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="408,39,33,74"/>
+        <Button x:Name="btn_agregarProvincias" Content="Agregar" HorizontalAlignment="Left" Margin="36,225,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_agregarProvincias_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="36,218,0,0" Stroke="Black" VerticalAlignment="Top" Width="211" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -29,10 +29,14 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Button x:Name="btn_actualizarProvincias" Content="Actualizar" HorizontalAlignment="Left" Margin="185,231,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22"/>
-        <Button x:Name="btn_siguienteProvincias" Content="Siguiente" HorizontalAlignment="Left" Margin="437,232,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteProvincias_Click"/>
-        <Button x:Name="btn_menuProvincias" Content="Menu" HorizontalAlignment="Left" Margin="368,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuProvincias_Click_1"/>
-        <Button x:Name="btn_atrasProvincias" Content="Volver" HorizontalAlignment="Left" Margin="299,232,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasProvincias_Click"/>
+        <Button x:Name="btn_actualizarProvincias" Content="Actualizar" HorizontalAlignment="Left" Margin="185,225,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_actualizarProvincias_Click"/>
+        <Button x:Name="btn_siguienteProvincias" Content="Siguiente" HorizontalAlignment="Left" Margin="501,262,0,0" VerticalAlignment="Top" Width="64" Click="btn_siguienteProvincias_Click"/>
+        <Button x:Name="btn_menuProvincias" Content="Menu" HorizontalAlignment="Left" Margin="432,262,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_menuProvincias_Click_1"/>
+        <Button x:Name="btn_atrasProvincias" Content="Volver" HorizontalAlignment="Left" Margin="363,262,0,0" VerticalAlignment="Top" Width="64" UseLayoutRounding="False" Click="btn_atrasProvincias_Click"/>
+        <Button x:Name="btn_borrarProvincias" Content="Borrar" HorizontalAlignment="Left" Margin="110,225,0,0" VerticalAlignment="Top" Width="62" Background="#FFDDDDDD" Height="22" Click="btn_borrarProvincias_Click"/>
+        <Label x:Name="lbl_id_Copy1" Content="Descripcion:&#xA;" HorizontalAlignment="Left" Margin="31,86,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" FontStyle="Normal"/>
+        <TextBox x:Name="tbox_Descripcion" HorizontalAlignment="Left" Margin="127,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Rectangle HorizontalAlignment="Left" Height="176" Margin="400,40,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
 
     </Grid>
 </Window>
